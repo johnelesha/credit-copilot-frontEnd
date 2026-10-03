@@ -56,12 +56,23 @@ export default function AssessPage() {
                     <section className="bg-white border rounded-xl p-4 space-y-3">
                         <h1 className="text-xl font-semibold">Assess application</h1>
                         <div className="flex flex-wrap gap-2">
-                            <input
-                                className="border rounded-lg px-3 py-2 text-sm min-w-40"
+                            <select
+                                className="border rounded-lg px-3 py-2 text-sm cursor-pointer min-w-40"
                                 value={applicationId}
                                 onChange={(e) => setApplicationId(e.target.value)}
-                                placeholder="APP-001"
-                            />
+                            >
+                                <option value="APP-001">APP-001 (approvable)</option>
+                                <option value="APP-002">
+                                    APP-002 (refer – no fake extract)
+                                </option>
+                                <option value="APP-003">APP-003 (decline – age)</option>
+                                <option value="APP-004">
+                                    APP-004 (refer – injection pack)
+                                </option>
+                                <option value="APP-005">
+                                    APP-005 (refer – no fake extract)
+                                </option>
+                            </select>
                             <button
                                 onClick={onAssess}
                                 disabled={loading}
