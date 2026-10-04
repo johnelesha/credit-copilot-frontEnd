@@ -13,3 +13,11 @@ React + Vite + TypeScript + Tailwind UI for the underwriting API.
 
 - credit_officer / credit123
 - senior_officer / senior123
+
+## Pages
+- `/login` – JWT login
+- `/ask` – policy Q&A + citations / refusal
+- `/assess` – run pipeline, rules, steps, approve/reject
+
+## Note
+Backend must be seeded (`seed:policy`, `seed:applications`, `seed:users`) before using Assess.
